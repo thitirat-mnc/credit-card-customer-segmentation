@@ -12,7 +12,7 @@
 - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
 - [K-means Clustering & PCA & Autoencoder for Dimensionality Reduction](#k-means)
 - [Logistic Regression for Future Cluster Prediction](#logistic-regression)
-
+- [Insights from Customer Segmentation](#customer-segmentation-insights-from-credit-card-usage-data)
 
 
 ---
@@ -43,47 +43,93 @@
 ![confusion_matix](https://github.com/thitirat-mnc/credit-card-customer-segmentation/assets/134206687/65004bb4-cb35-4388-98c5-12b9f1ed094b)
 
 ---
-## **📊 Insights Drawn**
-The customer base is segmented into three primary clusters, each with distinct behaviors and profitability profiles:
 
-### 💰 Cluster 1: Conservative Spenders: 68.36% of the customers
-> **🔍 Characteristics**:
-> * Low balance
-> * Low purchases and cash advance usage
-> * Moderate purchase frequency
-> * Low credit limit
+## Customer Segmentation Insights from Credit Card Usage Data
 
-📌 Insights:
-* These customers use credit cards mainly for emergencies or occasional spending
-* Low profitability due to limited transaction volume and interest generation
-* Moderate purchase frequency indicates potential to increase usage
+Our model has identified **three distinct customer segments** based on behavioral patterns. Each segment represents a unique opportunity for strategic targeting and value creation.
 
-While currently low in profitability, this group shows potential due to their moderate purchase frequency
-* These customers mainly use their credit card for emergencies or occasional spending rather than as a primary payment method
-* They are not profitable for the bank because they don’t generate much transaction volume or interest fees
-* Since they have a moderate purchase frequency, they could potentially be encouraged to spend more
+---
 
-🎯 Strategy:
-* *Encourage More Spending*: Offer personalized promotions or cashback rewards on frequent purchases to increase their transaction volume.
-* *Installment Plans*: Introduce installment purchase options with low-interest rates to make them more comfortable with larger purchases.
-* *Educational Content*: Provide financial literacy materials on how to maximize credit card benefits and build a positive credit history.
-* *Gradual Credit Limit Increase*: Offer slight credit limit increases based on responsible usage to encourage more spending.
+### 🔹 Cluster 1: **Conservative Spenders**
+**🧍 Proportion**: `68.36%` of total customers  
+**💼 Profile**:
+- Low balance
+- Low credit limit
+- Low purchase and cash advance usage
+- Moderate purchase frequency
+
+**🧠 Behavioral Insight**:  
+These customers use their credit card mainly for emergencies or occasional expenses. They generate low transaction volume and minimal interest, making them less profitable — **but** their moderate usage signals potential for growth.
+
+**🎯 Strategic Recommendations**:
+- 💸 **Incentivize Spending**: Offer cashback and tailored promotions to encourage more frequent purchases.
+- 🧾 **Introduce Installment Plans**: Provide low-interest options to ease larger transactions.
+- 📚 **Educate for Empowerment**: Share financial literacy content on credit usage and benefits.
+- 📈 **Increase Credit Gradually**: Reward responsible users with credit limit upgrades.
+
+> ✅ **Goal**: Transition these low-engagement users into active spenders through value-driven incentives and education.
+
+---
+
+### 🔹 Cluster 2: **Frequent Purchasers**
+**🧍 Proportion**: `13.77%` of total customers  
+**💼 Profile**:
+- Moderately high balance
+- High volume of purchases (one-off and installment)
+- Low cash advance usage
+- High credit limit
+- Strong repayment behavior
+
+**🧠 Behavioral Insight**:  
+These customers actively use their credit cards for day-to-day purchases and pay off their balances on time. They represent the **most profitable and least risky segment** — ideal for retention and upselling.
+
+**🎯 Strategic Recommendations**:
+- 🏆 **Reward Loyalty**: Offer enhanced cashback, discounts, and travel perks.
+- 💎 **Premium Benefits**: Early access to sales, VIP customer support, and luxury experiences.
+- 🚀 **Upsell Credit**: Encourage more spending by offering increased credit limits.
+- 💼 **Cross-Sell Opportunities**: Suggest premium cards, loans, or investment products.
+
+> ✅ **Goal**: Deepen engagement and loyalty with premium experiences and tailored financial offerings.
+
+---
+
+### 🔹 Cluster 3: **Revolvers / High-Balance Borrowers**
+**🧍 Proportion**: `17.84%` of total customers  
+**💼 Profile**:
+- Very high balance
+- Low purchase frequency
+- Frequent and high cash advance usage
+- High minimum payments and credit limits
+
+**🧠 Behavioral Insight**:  
+These customers often use credit cards as a **borrowing tool**, relying heavily on cash advances rather than purchases. While they generate substantial **interest revenue**, they also pose the **highest credit risk**.
+
+**🎯 Strategic Recommendations**:
+- 🛡 **Credit Risk Monitoring**: Closely track usage and adjust exposure as needed.
+- 🧭 **Support Responsible Repayment**: Offer debt consolidation or financial counseling services.
+- 🔄 **Offer Better Alternatives**: Recommend personal loans or lines of credit better suited to their needs.
+- 🚫 **Discourage Overuse**: Implement safeguards to reduce dependency on cash advances.
+
+> ⚠️ **Risk**: High revenue potential from interest, but with elevated default risk.
+
+---
+
+### 🧾 Summary Table
+
+| Segment                   | % of Customers | Profitability       | Risk Level | Key Opportunity                          |
+|---------------------------|----------------|----------------------|------------|-------------------------------------------|
+| Conservative Spenders     | 68.36%         | Low (growable)       | Low        | Increase engagement and transaction volume |
+| Frequent Purchasers       | 13.77%         | High (transactional) | Low        | Retain and upsell premium services         |
+| High-Balance Borrowers    | 17.84%         | High (interest-based)| High       | Manage risk, offer better financial tools  |
+
+---
+
+### 📌 Takeaway
+
+By understanding and strategically addressing the needs of each segment, businesses can:
+
+- 💡 Maximize revenue from high-value users  
+- 🔄 Convert low-usage customers into active spenders  
+- 🛡 Mitigate risk from high-balance, high-dependency users  
 
 
-### 🛍️ Cluster 2:Frequent Purchasers : 13.77% of the customers,
-> **Characteristics**: Moderately High balance, high one-off and installment purchases, frequent purchases, low cash advance usage (use their credit card primarily for purchases, not as a loan.), high credit limit, and of course high payment, so they settle their balances well, reducing the bank’s risk.
-Strategy:
-* Loyalty Rewards: Enhance cashback, discounts, or travel rewards for frequent usage to retain their engagement.
-* Exclusive Offers: Provide them with premium benefits such as priority customer service, travel perks, or early access to sales.
-* Upsell Higher Credit Limits: Since they are responsible with payments, offering higher limits could increase spending and satisfaction.
-* Cross-Selling Financial Products: Suggest additional financial products like premium credit cards, personal loans, or investment services.
-* This is the most profitable group in terms of transaction fees and spending volume.
-* They pay their bills on time, meaning they are low-risk customers.
-* They are ideal candidates for premium services and rewards programs to retain their loyalty.
-  
-3) Third Customers cluster (Revolvers / High Balance / Cash Advancement): account for 17.84% of the customers
-> **Characteristics**: Very high balance, low purchase frequency, high and frequent cash advances (Instead of purchases, they withdraw cash often, likely treating their credit card as a loan, in contrast to the second group
-* High minimum payments, which means they accumulate high interest, but also have high credit limits as well. So they have access to large amounts of credit, increasing their borrowing capacity.
-* They generate the most interest revenue for the bank but also pose the highest credit risk.
-* Since they rarely make purchases, they are not ideal for transaction-based revenue.
-* Their high dependence on cash advances suggests financial stress, making them more likely to default on payments.
